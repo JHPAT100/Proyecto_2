@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.patron_master_detail.modelo.ModeloArticulos;
 
 
 import java.util.List;

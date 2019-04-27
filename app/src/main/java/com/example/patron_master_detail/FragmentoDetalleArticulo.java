@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.herprogramacion.tipsdesalud.modelo.ModeloArticulos;
 
 /**
  * Fragmento que representa el panel del detalle de un artículo.

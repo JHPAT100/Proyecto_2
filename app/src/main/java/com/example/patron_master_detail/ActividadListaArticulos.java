@@ -1,20 +1,17 @@
 package com.example.patron_master_detail;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
-import com.example.patron_master_detail.modelo.ModeloArticulos;
 
 /**
  * Actividad con la lista de artículos. Si el ancho del dispositivo es mayor o igual a 900dp, entonces
  * se incrusta el fragmento de detalle {@link FragmentoDetalleArticulo} para generar el patrón
  * Master-detail
  */
-public class ActividadListaArticulo extends AppCompatActivity
-        implements FragmentoListaArticulo.EscuchaFragmento {
+public class ActividadListaArticulos extends AppCompatActivity
+        implements FragmentoListaArticulos.EscuchaFragmento {
 
     // ¿Hay dos paneles?
     private boolean dosPaneles;
@@ -22,7 +19,7 @@ public class ActividadListaArticulo extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actividad_lista_articulo);
+        setContentView(R.layout.actividad_lista_articulos);
 
         ((Toolbar) findViewById(R.id.toolbar)).setTitle(getTitle());
 
@@ -37,7 +34,7 @@ public class ActividadListaArticulo extends AppCompatActivity
         // Agregar fragmento de lista
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.contenedor_lista, FragmentoListaArticulo.crear())
+                .replace(R.id.contenedor_lista, FragmentoListaArticulos.crear())
                 .commit();
 
     }

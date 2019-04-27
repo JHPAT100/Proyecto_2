@@ -8,9 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import com.example.patron_master_detail.*;
 /**
- * Actividad que muestra el detalle del artículo seleccionado en {@link ActividadListaArticulo}
+ * Actividad que muestra el detalle del artículo seleccionado en {@link ActividadListaArticulos}
  */
 public class ActividadDetalleArticulo extends AppCompatActivity {
 
@@ -54,7 +54,7 @@ public class ActividadDetalleArticulo extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home) {
-            NavUtils.navigateUpTo(this, new Intent(this, ActividadListaArticulo.class));
+            NavUtils.navigateUpTo(this, new Intent(this, ActividadListaArticulos.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
