@@ -22,15 +22,15 @@ public class ActividadListaArticulos extends AppCompatActivity
 
         ((Toolbar) findViewById(R.id.toolbar)).setTitle(getTitle());
 
-        // Verificación: ¿Existe el detalle en el layout?
+
         if (findViewById(R.id.contenedor_detalle_articulo) != null) {
-            // Si es asi, entonces confirmar modo Master-Detail
+
             dosPaneles = true;
 
             cargarFragmentoDetalle(ModeloArticulos.ITEMS.get(0).id);
         }
 
-        // Agregar fragmento de lista
+
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.contenedor_lista, FragmentoListaArticulos.crear())

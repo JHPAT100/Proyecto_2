@@ -17,10 +17,10 @@ import com.example.patron_master_detail.modelo.ModeloArticulos;
 
 public class FragmentoDetalleArticulo extends Fragment {
 
-    // EXTRA
+
     public static final String ID_ARTICULO = "extra.idArticulo";
 
-    // Articulo al cuál está ligado la UI
+
     private ModeloArticulos.Articulo itemDetallado;
 
     public FragmentoDetalleArticulo() {
@@ -31,7 +31,7 @@ public class FragmentoDetalleArticulo extends Fragment {
         super.onCreate(savedInstanceState);
 
         if (getArguments().containsKey(ID_ARTICULO)) {
-            // Cargar modelo según el identificador
+
             itemDetallado = ModeloArticulos.MAPA_ITEMS.get(getArguments().getString(ID_ARTICULO));
 
         }
@@ -43,7 +43,7 @@ public class FragmentoDetalleArticulo extends Fragment {
         View v = inflater.inflate(R.layout.fragmento_detalle_articulo, container, false);
 
         if (itemDetallado != null) {
-            // Toolbar en master-detail
+
             Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar_detalle);
             if (toolbar != null)
                 toolbar.inflateMenu(R.menu.menu_detalle_articulo);

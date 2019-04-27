@@ -21,9 +21,9 @@ public class ActividadDetalleArticulo extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_detalle);
         setSupportActionBar(toolbar);
 
-        // Verificación: ¿La app se está ejecutando en un teléfono?
+
         if (!getResources().getBoolean(R.bool.esTablet)) {
-            // Mostrar Up Button
+
             ActionBar actionBar = getSupportActionBar();
             if (actionBar != null) {
                 actionBar.setDisplayHomeAsUpEnabled(true);
@@ -31,7 +31,7 @@ public class ActividadDetalleArticulo extends AppCompatActivity {
         }
 
         if (savedInstanceState == null) {
-            // Añadir fragmento de detalle
+
             Bundle arguments = new Bundle();
             arguments.putString(FragmentoDetalleArticulo.ID_ARTICULO,
                     getIntent().getStringExtra(FragmentoDetalleArticulo.ID_ARTICULO));
